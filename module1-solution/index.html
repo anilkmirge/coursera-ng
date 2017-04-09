@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Coursera NG Tutorial</title>
+        <script src="app/angular.min.js"></script>
+        <script src="app/app.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body ng-app="LunchCheck">
+        <h1>Name Calculator</h1>
+        <div data-ng-controller="LunchCheckController">
+          Lunch Items (comma separated) : <input type="text" data-ng-model="items" >
+            <button class="btn btn-primary" data-ng-click="checkIfTooMuch()">Check If Too Much</button>
+            <div>
+                <button class="btn {{textStyle}}">{{lunchResult}}</button>
+            </div>
+        </div>
+
+    </body>    
+</html>
