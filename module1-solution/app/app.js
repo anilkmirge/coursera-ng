@@ -13,7 +13,7 @@
             var itemCount = 0;
             if (inputItems.length === 0) {
                 $scope.lunchResult = 'Please enter data first';
-                $scope.textStyle = 'btn-danger';
+                $scope.textStyle = 'btn btn-danger';
             } else {
                 for (var i = 0; i < inputItems.length; i++) {
                     var inputItem = inputItems[i];
@@ -22,7 +22,7 @@
                     }
                 }
                 if (itemCount > 0 ) {
-                    $scope.textStyle = 'btn-success';
+                    $scope.textStyle = 'btn btn-success';
                     if (itemCount <= 3) {
                         $scope.lunchResult = 'Enjoy!';
                     }
@@ -31,7 +31,7 @@
                     }
                 } else {
                     $scope.lunchResult = 'Please enter data first';
-                    $scope.textStyle = 'btn-danger';
+                    $scope.textStyle = 'btn btn-danger';
                 }
             }
         }
