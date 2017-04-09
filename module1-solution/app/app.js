@@ -7,13 +7,14 @@
     
     function LunchCheckController($scope) {
         $scope.items='';
+        $scope.showResult = false;
         $scope.checkIfTooMuch = function() {
             var inputItems = $scope.items.split(',');
-            console.log(inputItems);
             var itemCount = 0;
             if (inputItems.length === 0) {
                 $scope.lunchResult = 'Please enter data first';
                 $scope.textStyle = 'btn btn-danger';
+                $scope.showResult = true;
             } else {
                 for (var i = 0; i < inputItems.length; i++) {
                     var inputItem = inputItems[i];
@@ -23,6 +24,7 @@
                 }
                 if (itemCount > 0 ) {
                     $scope.textStyle = 'btn btn-success';
+                    $scope.showResult = true;
                     if (itemCount <= 3) {
                         $scope.lunchResult = 'Enjoy!';
                     }
@@ -32,6 +34,7 @@
                 } else {
                     $scope.lunchResult = 'Please enter data first';
                     $scope.textStyle = 'btn btn-danger';
+                    $scope.showResult = true;
                 }
             }
         }
