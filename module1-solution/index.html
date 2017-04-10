@@ -11,7 +11,7 @@
           Lunch Items (comma separated) : <input type="text" data-ng-model="items" >
             <button class="btn btn-primary" data-ng-click="checkIfTooMuch()">Check If Too Much</button>
             <div data-ng-if="showResult">
-                <button class="{{textStyle}}">{{lunchResult}}</button>
+                <button class="{{textStyle}}" data-ng-disabled="true">{{lunchResult}}</button>
             </div>
         </div>
 
